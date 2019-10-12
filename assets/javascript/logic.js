@@ -2,11 +2,13 @@
 var charactersArray = ['Hercules', 'Megara', 'Iron Man', 'Winnie the Pooh'];
 
 function renderButtons() {
-
+// Make it so that buttons are not added on repeat 
     $('.buttonsDiv').empty();
+
 
     for (var i = 0; i < charactersArray.length; i++){
         var newButton = $('<button>');
+// Give each button a class and data name 
         newButton.addClass('gifButton');
         newButton.attr('data-name', charactersArray[i]);
         // Initial button text 
@@ -40,7 +42,7 @@ $(document).on('click', '.gifButton', function(){
         var results = response.data;
         for (var i = 0; i < results.length; i++){
             if (results[i].rating !== 'r') {
-                var gifDiv = $('div');
+                var gifDiv = $('<div>');
                 var rating = results[i].rating;
                 var p = $('<p>').text('Rating: ' + rating);
                 var characterImg = $('<img>');
@@ -48,10 +50,12 @@ $(document).on('click', '.gifButton', function(){
                 gifDiv.append(p);
                 gifDiv.append(characterImg);
     
-                // $('.gif-view').prepend(gifDiv)
+                $('.gif-view').append(gifDiv)
             }
         }
     })
+    $('.gif-view').empty();
+
 })
 
 // $(document).on('click', function(){
