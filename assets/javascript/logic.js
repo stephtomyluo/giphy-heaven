@@ -27,7 +27,7 @@ $('#add-gif').on('click', function(event) {
     renderButtons();
 })
 
-$(document).on('click', function(){
+$(document).on('click', '.gifButton', function(){
     var characterGif = $(this).attr('data-name');
 
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
@@ -37,8 +37,6 @@ $(document).on('click', function(){
         url: queryURL,
         method: 'GET'
     }).then(function(response){
-        console.log(queryURL)
-        console.log(response)
         var results = response.data;
         for (var i = 0; i < results.length; i++){
             if (results[i].rating !== 'r') {
@@ -56,16 +54,16 @@ $(document).on('click', function(){
     })
 })
 
-$('.gif').on('click', function(){
-    var state = $(this).attr("data-state");
-    if (state === "still") {
-        $(this).attr("src", $(this).attr("data-animate"));
-        $(this).attr("data-state", "animate");
-      } else {
-        $(this).attr("src", $(this).attr("data-still"));
-        $(this).attr("data-state", "still");
-      }
-})
+// $(document).on('click', function(){
+//     var state = $(this).attr("data-state");
+//     if (state === "still") {
+//         $(this).attr("src", $(this).attr("data-animate"));
+//         $(this).attr("data-state", "animate");
+//       } else {
+//         $(this).attr("src", $(this).attr("data-still"));
+//         $(this).attr("data-state", "still");
+//       }
+// })
 
 // Have initial buttons show 
 renderButtons();
