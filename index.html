@@ -5,23 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Giphy Heaven</title>
+
+<!-- JQuery  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
 <body>
-
+<div class="container">
+    <h1>Character Paradise</h1>
 <!-- Where buttons will appear  -->
 <div class="buttonsDiv">
     </div>
 
 <!-- Input for user to add gif button  -->
 <form id='gif-form'>
-    <label for='gif-input'>Gif Galore!</label>
+    <label for='gif-input'>Add any character!</label>
     <input type='text' id='gif-input'>
     <br>
 
 <!-- Button for new gifs to be added  -->
-    <input id='add gif' type='submit' value='Gif Galore!'>
+    <input id='add-gif' type='submit' value='Gif Galore!'>
 </form>
 
+<!-- Where gifs will appear  -->
+<div class="gif-view">
+    </div>
 
+</div>
+
+<script src="./assets/javascript/logic.js"></script>
 </body>
 </html>
