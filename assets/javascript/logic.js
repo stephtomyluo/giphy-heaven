@@ -19,32 +19,6 @@ function renderButtons() {
     }
 }
 
-// Trying to add movie 
-// function displayMovieInfo(){
-//     var movie = $(this).attr('data-name');
-//     var queryURL = "https://www.omdbapi.com/?t=" + movie + "&apikey=29d38406";
-
-//     $.ajax({
-//         url: queryURL,
-//         method: 'GET'
-//     }).then(function(response){
-//         var movieDiv = $("<div class='movie'>");
-//         var rating = response.Rated;
-//         var ratingText = $("<p>").text("Rating: " + rating);
-//         movieDiv.append(ratingText);
-//         var released = response.Released;
-//         var releaseDate = $("<p>").text("Released: " + released);
-//         movieDiv.append(releaseDate);
-//         var plot = response.Plot;
-//         var plotText = $("<p>").text("Plot: " + plot);
-//         movieDiv.append(plotText);
-//         var imgURL = response.Poster;
-//         var image = $("<img>").attr("src", imgURL);
-//         movieDiv.append(image);
-//         $(".movie-view").append(movieDiv);
-//     })
-// }
-
 // When gif button is clicked 
 $('#add-gif').on('click', function(event) {
     event.preventDefault();
@@ -57,8 +31,6 @@ $('#add-gif').on('click', function(event) {
 
     renderButtons();
 })
-
-// $(document).on("click", ".gifButton", displayMovieInfo);
 
 // Show gifs associated with button content 
 $(document).on('click', '.gifButton', function(){
