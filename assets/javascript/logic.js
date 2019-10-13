@@ -64,16 +64,16 @@ $(document).on('click', '.gifButton', function(){
 
 })
 
-// $(document).on('click', '.gifImg' function(){
-//     var state = $(this).attr("data-state");
-//     if (state === "still") {
-//         $(this).attr("src", $(this).data("animated"));
-//         $(this).attr("data-state", "animated");
-//       } else {
-//         $(this).attr("src", $(this).data("still"));
-//         $(this).attr("data-state", "still");
-//       }
-// })
+$(document).on('click', '.gifImg', function(){
+    var state = $(this).attr("data-state");
+    if (state === "still") {
+        $(this).attr("src", $(this).data("animated"));
+        $(this).attr("data-state", "animated");
+      } else {
+        $(this).attr("src", $(this).data("still"));
+        $(this).attr("data-state", "still");
+      }
+})
 
 // Have initial buttons show 
 renderButtons();
