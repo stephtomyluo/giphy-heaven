@@ -6,11 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Giphy Heaven</title>
 
+<!-- CSS  -->
+<link rel="stylesheet" href="./assets/css/style.css">
+
 <!-- JQuery  -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+<!-- Bootstrap  -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 </head>
-<body>
+<body style="background-image:url(assets/images/cloud.jpg)">
+
 <div class="container">
     <h1>Character Paradise</h1>
 <!-- Where buttons will appear  -->
@@ -24,13 +31,16 @@
     <br>
 
 <!-- Button for new gifs to be added  -->
-    <input id='add-gif' type='submit' value='Gif Galore!'>
+    <input id='add-gif' type='submit' value='Gif Galore!' class='btn btn-info'>
 </form>
-
+<div class="row">
 <!-- Where gifs will appear  -->
-<div class="gif-view">
+<div class="gif-view col 6">
     </div>
 
+<div class="movie-view col-6">
+    </div>
+</div>
 </div>
 
 <script src="./assets/javascript/logic.js"></script>

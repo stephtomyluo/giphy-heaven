@@ -1,0 +1,15 @@
+.gifButton {
+  border: solid 5px #fc5185;
+  transition: border-width 0.6s linear;
+  margin-left: 5px;
+  margin-bottom: 20px;
+}
+
+.gifButton:hover {
+  border-width: 10px;
+}
+
+#add-gif {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
